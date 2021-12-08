@@ -9,7 +9,7 @@
 A formação conta com 9 cursos principais, junto com materiais complementares.
 Ainda estou em progresso com a formação mas atualmente encontra-se nesse status:
 
-- [ ] JavaScript: Programando a Orientação a Objetos
+- [X] JavaScript: Programando a Orientação a Objetos
 - [ ] JavaScript: Interfaces e Herança em Orientação a Objetos
 - [ ] React: Entendendo como a biblioteca funciona
 - [ ] React: Ciclo de vida dos componentes
