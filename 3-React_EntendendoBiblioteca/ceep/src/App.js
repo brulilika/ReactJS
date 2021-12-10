@@ -1,39 +1,36 @@
-import React, {Component} from "react";
-import ListaNotas from "./component/ListaNotas/ListaNotas";
-import FormularioCadastro from "./component/FormularioCadastro/FormularioCadastro";
+import React, { Component } from "react";
+import ListaDeNotas from "./component/CardNotas/CardNotas";
+import FormularioCadastro from './component/FormularioCadastro/FormularioCadastro'
 import "./assets/app.css";
 import './assets/index.css';
+class App extends Component {
 
-class App extends Component{
   constructor(){
     super();
+
     this.state = {
       notas:[]
     }
   }
 
-  buttonClick(titulo, mensagem){
-    const novaNota = {titulo, mensagem};
+  criarNota(titulo, texto){
+    const novaNota = {titulo, texto};
     const novoArrayNotas = [...this.state.notas,novaNota]
     const novoEstado = {
       notas:novoArrayNotas
     }
-    //renderiza de novo o objeto
-    //this.render();
     this.setState(novoEstado)
   }
 
-  //JSX
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro criarNota={this.buttonClick.bind(this)}/>
-        <ListaNotas notas={this.state.notas}/>
+        <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
+        <ListaDeNotas notas={this.state.notas}/>
       </section>
     );
   }
-};
+}
 
-//react = lib
-//React = ecossistema
+//new ListaDeNotas({notas:this.notas})
 export default App;
