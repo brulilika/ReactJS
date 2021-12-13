@@ -18,6 +18,7 @@ class App extends Component {
     const novoArrayNotas = [...this.state.notas,novaNota]
     const novoEstado = {
       notas:novoArrayNotas
+      
     }
     this.setState(novoEstado)
   }
