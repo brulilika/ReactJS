@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
+import ListaCategorias from "./components/ListaCategorias";
 import "./assets/App.css";
 import './assets/index.css';
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
     super();
 
     this.state = {
-      notas:[]
+      notas:[],
+      categorias: ["Trabalho", "Esportes"]
     }
   }
 
@@ -20,6 +22,12 @@ class App extends Component {
       notas:novoArrayNotas
     }
     this.setState(novoEstado)
+  }
+
+  adicionarCategoria(nomeCategoria){
+    const novoArrayCategorias = [...this.state.categorias, nomeCategoria]
+    const novoEstado = {...this.state, categorias:novoArrayCategorias};
+    this.setState(novoEstado);
   }
 
   deletarNota(indice){
@@ -33,7 +41,10 @@ class App extends Component {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)}/>
-        <ListaDeNotas notas={this.state.notas} apagarNota={this.deletarNota.bind(this)}/>
+        <main className="conteudo-principal">
+          <ListaCategorias adicionarCategoria={this.adicionarCategoria.bind(this)} categorias={this.state.categorias}/>
+          <ListaDeNotas notas={this.state.notas} apagarNota={this.deletarNota.bind(this)}/>
+        </main>
       </section>
     );
   }
