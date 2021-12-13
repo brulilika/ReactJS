@@ -5,9 +5,9 @@ import "./estilo.css";
 import {ReactComponent as TrashSVG} from "../../assets/trash_delete.svg"
 
 class CardNota extends Component {
+
   apagar(){
-    const indice = this.props.indice;
-    this.props.apagarNota(indice);
+    this.props.apagarNota(this.props.indice);
   }
 
 
