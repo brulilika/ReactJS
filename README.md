@@ -12,7 +12,7 @@ Ainda estou em progresso com a formação mas atualmente encontra-se nesse statu
 - [X] JavaScript: Programando a Orientação a Objetos (10hrs)
 - [X] JavaScript: Interfaces e Herança em Orientação a Objetos (12hrs)
 - [X] React: Entendendo como a biblioteca funciona (12hrs)
-- [ ] React: Ciclo de vida dos componentes
+- [X] React: Ciclo de vida dos componentes (12hrs)
 - [ ] React: Function Components, uma abordagem moderna
 - [ ] React: Hooks, Contextos e boas práticas
 - [ ] React Router: Navegação em uma SPA
