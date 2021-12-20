@@ -1,6 +1,7 @@
 import { Button, TextField, Switch, FormControlLabel } from '@material-ui/core';
 import React, {useState, useContext} from 'react';
 import validacoesCadastro from '../../../context/ValidacoesCadastro';
+import useErros from '../../../hooks/useErros';
 
 //descontrucao do proprio parametro
 function FormularioPessoal({aoEnviar}){
@@ -11,24 +12,9 @@ function FormularioPessoal({aoEnviar}){
     const[cpf, setCPF] = useState("");
     const[promocao, setPromocaoo] = useState(false);
     const[novidade, setNovidade] = useState(false);
-    const[erros, setErros] = useState({cpf: {erro: false, texto:""}});
-
     const validacoes = useContext(validacoesCadastro)
-    function validarCampos(evento){
-        const {name, value} = evento.target;
-        const valido = validacoes[name](value);
-        const novoEstado = {...erros};
-        novoEstado[name] = valido;
-        setErros(novoEstado)
-    }
-
-    function possoEnviar(){
-        for(let campo in erros){
-            if(erros[campo].erro)
-                return false;
-        }
-        return true;
-    }
+    const [erros, validarCampos, possoEnviar] = useErros(validacoes);
+    
 
     return (
         <form onSubmit={e => {
@@ -45,7 +31,7 @@ function FormularioPessoal({aoEnviar}){
                             setSobrenome(e.target.value);
                         }}/>
             <TextField  id="cpf" name="cpf" value={cpf} label="CPF" variant="outlined" margin="normal" 
-                        error={erros.cpf.erro} helperText={erros.cpf.texto}
+                        error={erros.cpf.erro} helperText={erros.cpf.texto} required
                         onChange={e => {
                             setCPF(e.target.value); 
                         }}
