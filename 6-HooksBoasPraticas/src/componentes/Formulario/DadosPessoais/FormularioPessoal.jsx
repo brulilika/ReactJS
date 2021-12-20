@@ -1,8 +1,9 @@
 import { Button, TextField, Switch, FormControlLabel } from '@material-ui/core';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import validacoesCadastro from '../../../context/ValidacoesCadastro';
 
 //descontrucao do proprio parametro
-function FormularioPessoal({aoEnviar, validacoes}){
+function FormularioPessoal({aoEnviar}){
 
     //variavel, funcao para ajustar o estado
     const[nome, setNome] = useState("");
@@ -12,6 +13,7 @@ function FormularioPessoal({aoEnviar, validacoes}){
     const[novidade, setNovidade] = useState(false);
     const[erros, setErros] = useState({cpf: {erro: false, texto:""}});
 
+    const validacoes = useContext(validacoesCadastro)
     function validarCampos(evento){
         const {name, value} = evento.target;
         const valido = validacoes[name](value);
