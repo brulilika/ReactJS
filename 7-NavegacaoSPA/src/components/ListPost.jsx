@@ -4,10 +4,10 @@ import {buscaPost} from '../api/api'
 
 function ListaPost({url}){
     const [posts, setPosts] = useState([])
-    
+
     useEffect(() =>{
         buscaPost(url,setPosts)
-    }, [])
+    }, [url])
 
     return(
         <section className="posts container">
