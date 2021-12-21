@@ -14,8 +14,8 @@ Ainda estou em progresso com a formação mas atualmente encontra-se nesse statu
 - [X] React: Entendendo como a biblioteca funciona (12hrs)
 - [X] React: Ciclo de vida dos componentes (12hrs)
 - [X] React: Function Components, uma abordagem moderna (12hrs)
-- [ ] React: Hooks, Contextos e boas práticas (10hrs)
-- [ ] React Router: Navegação em uma SPA (8hrs)
+- [X] React: Hooks, Contextos e boas práticas (10hrs)
+- [X] React Router: Navegação em uma SPA (8hrs)
 - [ ] React: Abstraindo seu CSS com Styled Components (6hrs)
 - [ ] React: Automatizando os testes em aplicações front-end (8hrs)
 
