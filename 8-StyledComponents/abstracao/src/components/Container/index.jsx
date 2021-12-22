@@ -6,7 +6,7 @@ import Conta from "../Conta";
 const Container = () => {
   return (
     <div className="container">
-      <Titulo>Olá Fulano!</Titulo>
+      <Titulo>Olá Bruna!</Titulo>
       <section className="conteudo">
         <Conta />
       </section>
