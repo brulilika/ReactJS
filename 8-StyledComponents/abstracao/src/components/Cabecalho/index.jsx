@@ -3,6 +3,17 @@ import styled from "styled-components";
 import bank_logo from "../../assets/images/bank_logo.svg";
 import { corPrimaria } from "../UI/Variaveis";
 
+const BtnCabecalho = styled.a`
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  border: 2px solid white;
+  background: ${(props) => (props.primary ? "white" : corPrimaria)};
+  color: ${(props) => (props.primary ? corPrimaria : "white")};
+`;
+
 const StyledCabecalho = styled.nav`
   background-color: ${corPrimaria};
   display: flex;
@@ -15,18 +26,6 @@ const StyledCabecalho = styled.nav`
 const Logo = styled.img`
   height: 50px;
   width: 50px;
-`;
-
-const BtnCabecalho = styled.a`
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  border: 2px solid white;
-  background: ${(props) => (props.primary ? "white" : corPrimaria)};
-  color: ${(props) => (props.primary ? corPrimaria : "white")};
-  
 `;
 
 const Cabecalho = () => {
