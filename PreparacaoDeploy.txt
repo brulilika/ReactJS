@@ -1,0 +1,22 @@
+Aplicação em modo debug tem muitas coisas carregadas
+
+-> criação de servidor com Express
+    "server.js"
+        const express = require('express')
+        const app = express()
+
+        const baseDir = `${__dirname}/build/`
+        app.use(express.static('baseDir'))
+        app.get('*', (request, response) => {
+            responde.sendFile('index.js', {
+                root: baseDir
+            })
+        })
+
+        const port = 4000
+        app.listen(port,() => {
+            console.log(`$Servidor subindo em: http://localhost:{port}`)
+        })
+
+
+https://cursos.alura.com.br/extra/alura-mais/como-preparar-uma-aplicacao-react-para-o-deploy-c9
