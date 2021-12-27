@@ -17,6 +17,6 @@ Ainda estou em progresso com a formação mas atualmente encontra-se nesse statu
 - [X] React: Hooks, Contextos e boas práticas (10hrs)
 - [X] React Router: Navegação em uma SPA (8hrs)
 - [X] React: Abstraindo seu CSS com Styled Components (6hrs)
-- [ ] React: Automatizando os testes em aplicações front-end (8hrs)
+- [X] React: Automatizando os testes em aplicações front-end (8hrs)
 
 <!--[⬆ Voltar ao topo](#nome-do-projeto)<br>--->
